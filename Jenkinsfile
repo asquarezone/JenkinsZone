@@ -33,8 +33,8 @@ pipeline{
           )
         }
       }
-    }
-  }
+    
+  
   post {
     failure {
       emailext(
