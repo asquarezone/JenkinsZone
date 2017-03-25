@@ -21,7 +21,7 @@ pipeline{
         stage('Publish'){
             junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
         }
-    }
+    
 
     post {
         success {
@@ -45,4 +45,5 @@ pipeline{
       )
     }
   }
+    }
 }
