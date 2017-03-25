@@ -17,5 +17,9 @@ pipeline{
                 sh 'mvn clean install'
             }
         }
+
+        stage('Publish'){
+            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+        }
     }
 }
